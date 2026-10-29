@@ -1,0 +1,440 @@
+{
+  "songs": [
+    {
+      "id": "thriller",
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "year": 1982,
+      "hint": "Um clássico zumbi com a risada sinistra de Vincent Price!",
+      "aliases": ["thriller", "thriller michael jackson"],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Bateria",
+          "icon": "🥁",
+          "file": "audio/thriller_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "bass",
+          "name": "Baixo",
+          "icon": "🔊",
+          "file": "audio/thriller_bass.mp3",
+          "round": 2
+        },
+        {
+          "id": "guitar",
+          "name": "Guitarra",
+          "icon": "🎸",
+          "file": "audio/thriller_guitar.mp3",
+          "round": 3
+        },
+        {
+          "id": "other",
+          "name": "Sintetizadores & Efeitos",
+          "icon": "🎹",
+          "file": "audio/thriller_other.mp3",
+          "round": 4
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais",
+          "icon": "🎤",
+          "file": "audio/thriller_vocals.mp3",
+          "round": 5
+        }
+      ]
+    },
+    {
+      "id": "ghostbusters",
+      "title": "Ghostbusters",
+      "artist": "Ray Parker Jr.",
+      "year": 1984,
+      "hint": "Who you gonna call? 🚫👻 Uma das linhas de baixo mais contagiantes dos anos 80!",
+      "aliases": ["ghostbusters", "ghost busters"],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Bateria",
+          "icon": "🥁",
+          "file": "audio/ghostbusters_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "bass",
+          "name": "Baixo",
+          "icon": "🔊",
+          "file": "audio/ghostbusters_bass.mp3",
+          "round": 2
+        },
+        {
+          "id": "guitar",
+          "name": "Guitarra",
+          "icon": "🎸",
+          "file": "audio/ghostbusters_guitar.mp3",
+          "round": 3
+        },
+        {
+          "id": "other",
+          "name": "Sintetizadores & Efeitos",
+          "icon": "🎹",
+          "file": "audio/ghostbusters_other.mp3",
+          "round": 4
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais",
+          "icon": "🎤",
+          "file": "audio/ghostbusters_vocals.mp3",
+          "round": 5
+        }
+      ]
+    },
+    {
+      "id": "bury_a_friend",
+      "title": "Bury a Friend",
+      "artist": "Billie Eilish",
+      "year": 2019,
+      "hint": "O que tem embaixo da cama? O terror minimalista gravado com sons de broca de dentista! 👁️🦷",
+      "aliases": ["bury a friend", "bury a friend billie eilish"],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Batida & Estalos",
+          "icon": "🥁",
+          "file": "audio/bury_a_friend_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "other",
+          "name": "Baixo & Efeitos Sinistros",
+          "icon": "🔊",
+          "file": "audio/bury_a_friend_other.mp3",
+          "round": 2
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais",
+          "icon": "🎤",
+          "file": "audio/bury_a_friend_vocals.mp3",
+          "round": 3
+        }
+      ]
+    },
+    {
+      "id": "fnaf",
+      "title": "Five Nights at Freddy's",
+      "artist": "The Living Tombstone",
+      "year": 2014,
+      "hint": "We're waiting every night to finally roam and invite... 🐻🍕🤖",
+      "aliases": ["fnaf", "fnaf 1", "five nights at freddys", "fnaf song", "the living tombstone fnaf", "five nights at freddy's (fnaf)", "five nights at freddys (fnaf)"],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Bateria & Batida",
+          "icon": "🥁",
+          "file": "audio/fnaf_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "bass",
+          "name": "Baixo Synth",
+          "icon": "🔊",
+          "file": "audio/fnaf_bass.mp3",
+          "round": 2
+        },
+        {
+          "id": "other",
+          "name": "Sintetizadores & Chiptune",
+          "icon": "🎹",
+          "file": "audio/fnaf_other.mp3",
+          "round": 3
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais",
+          "icon": "🎤",
+          "file": "audio/fnaf_vocals.mp3",
+          "round": 4
+        }
+      ]
+    },
+    {
+      "id": "mary_on_a_cross",
+      "title": "Mary on a Cross",
+      "artist": "Ghost",
+      "year": 2019,
+      "hint": "O hit de rock psicodélico e gótico que explodiu no TikTok! ✝️👻",
+      "aliases": ["mary on a cross", "ghost mary on a cross", "mary on the cross", "ghost"],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Bateria",
+          "icon": "🥁",
+          "file": "audio/mary_on_a_cross_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "bass",
+          "name": "Baixo",
+          "icon": "🔊",
+          "file": "audio/mary_on_a_cross_bass.mp3",
+          "round": 2
+        },
+        {
+          "id": "guitar",
+          "name": "Guitarra & Riffs",
+          "icon": "🎸",
+          "file": "audio/mary_on_a_cross_guitar.mp3",
+          "round": 3
+        },
+        {
+          "id": "other",
+          "name": "Órgão & Sintetizadores",
+          "icon": "🎹",
+          "file": "audio/mary_on_a_cross_other.mp3",
+          "round": 4
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais",
+          "icon": "🎤",
+          "file": "audio/mary_on_a_cross_vocals.mp3",
+          "round": 5
+        }
+      ]
+    },
+    {
+      "id": "spooky_scary_skeletons",
+      "title": "Spooky, Scary Skeletons",
+      "artist": "The Living Tombstone ft. Andrew Gold",
+      "year": 2013,
+      "hint": "O maior meme de Halloween da história da internet! Dança dos esqueletos com batida eletrônica! 💀🎺",
+      "aliases": [
+        "spooky scary skeletons",
+        "spooky scary skeleton",
+        "spooky scary skeletons remix",
+        "spooky scary skeleton remix",
+        "andrew gold",
+        "the living tombstone",
+        "the living tombstone spooky scary skeletons",
+        "skeletons"
+      ],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Batida Eletrônica Dance",
+          "icon": "🥁",
+          "file": "audio/spooky_scary_skeletons_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "bass",
+          "name": "Baixo Synth & Eletro",
+          "icon": "🔊",
+          "file": "audio/spooky_scary_skeletons_bass.mp3",
+          "round": 2
+        },
+        {
+          "id": "other",
+          "name": "Trompetes & Sintetizadores",
+          "icon": "🎹",
+          "file": "audio/spooky_scary_skeletons_other.mp3",
+          "round": 3
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais",
+          "icon": "🎤",
+          "file": "audio/spooky_scary_skeletons_vocals.mp3",
+          "round": 4
+        }
+      ]
+    },
+    {
+      "id": "somebodys_watching_me",
+      "title": "Somebody's Watching Me",
+      "artist": "Rockwell ft. Michael Jackson",
+      "year": 1984,
+      "hint": "I always feel like somebody's watching me... E não tenho privacidade! 👁️🚪",
+      "aliases": [
+        "somebodys watching me",
+        "somebody is watching me",
+        "somebody watching me",
+        "rockwell",
+        "rockwell somebodys watching me",
+        "somebodys watching me rockwell"
+      ],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Bateria Anos 80",
+          "icon": "🥁",
+          "file": "audio/somebodys_watching_me_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "bass",
+          "name": "Baixo Synth",
+          "icon": "🔊",
+          "file": "audio/somebodys_watching_me_bass.mp3",
+          "round": 2
+        },
+        {
+          "id": "other",
+          "name": "Sintetizador Paranóico",
+          "icon": "🎹",
+          "file": "audio/somebodys_watching_me_other.mp3",
+          "round": 3
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais",
+          "icon": "🎤",
+          "file": "audio/somebodys_watching_me_vocals.mp3",
+          "round": 4
+        }
+      ]
+    },
+    {
+      "id": "this_is_halloween",
+      "title": "This Is Halloween",
+      "artist": "Danny Elfman (The Nightmare Before Christmas)",
+      "year": 1993,
+      "hint": "Boys and girls of every age, wouldn't you like to see something strange? 🎃🦴🕷️",
+      "aliases": [
+        "this is halloween",
+        "the nightmare before christmas",
+        "nightmare before christmas",
+        "danny elfman",
+        "o estranho mundo de jack"
+      ],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Marcha & Percussão Macabra",
+          "icon": "🥁",
+          "file": "audio/this_is_halloween_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "other",
+          "name": "Orquestra, Piano & Sopros",
+          "icon": "🎹",
+          "file": "audio/this_is_halloween_other.mp3",
+          "round": 2
+        },
+        {
+          "id": "vocals",
+          "name": "Coro & Personagens de Halloween",
+          "icon": "🎤",
+          "file": "audio/this_is_halloween_vocals.mp3",
+          "round": 3
+        }
+      ]
+    },
+    {
+      "id": "sweet_dreams",
+      "title": "Sweet Dreams (Are Made of This)",
+      "artist": "Eurythmics",
+      "year": 1983,
+      "hint": "O riff de sintetizador mais famoso e copiado do pop mundial! 🌙⚡",
+      "aliases": [
+        "sweet dreams",
+        "sweet dreams are made of this",
+        "eurythmics",
+        "eurythmics sweet dreams"
+      ],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Bateria Eletrônica",
+          "icon": "🥁",
+          "file": "audio/sweet_dreams_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "other",
+          "name": "Sintetizador Lendário & Baixo",
+          "icon": "🎹",
+          "file": "audio/sweet_dreams_other.mp3",
+          "round": 2
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais (Annie Lennox)",
+          "icon": "🎤",
+          "file": "audio/sweet_dreams_vocals.mp3",
+          "round": 3
+        }
+      ]
+    },
+    {
+      "id": "zombie",
+      "title": "Zombie",
+      "artist": "The Cranberries",
+      "year": 1994,
+      "hint": "In your head, in your head, they are fighting... O hino imortal do rock dos anos 90! 🧟‍♀️🎸",
+      "aliases": [
+        "zombie",
+        "the cranberries",
+        "cranberries",
+        "the cranberries zombie"
+      ],
+      "stems": [
+        {
+          "id": "drums",
+          "name": "Bateria Cadenciada",
+          "icon": "🥁",
+          "file": "audio/zombie_drums.mp3",
+          "round": 1
+        },
+        {
+          "id": "bass",
+          "name": "Linha Marcante de Baixo",
+          "icon": "🔊",
+          "file": "audio/zombie_bass.mp3",
+          "round": 2
+        },
+        {
+          "id": "guitar",
+          "name": "Guitarras (Limpa & Distorção)",
+          "icon": "🎸",
+          "file": "audio/zombie_guitar.mp3",
+          "round": 3
+        },
+        {
+          "id": "vocals",
+          "name": "Vocais (Dolores O'Riordan)",
+          "icon": "🎤",
+          "file": "audio/zombie_vocals.mp3",
+          "round": 4
+        }
+      ]
+    }
+  ],
+  "guessOptions": [
+    "Somebody's Watching Me - Rockwell ft. Michael Jackson",
+    "Spooky, Scary Skeletons (Remix) - The Living Tombstone ft. Andrew Gold",
+    "Mary on a Cross - Ghost",
+    "Thriller - Michael Jackson",
+    "Ghostbusters - Ray Parker Jr.",
+    "Bury a Friend - Billie Eilish",
+    "Five Nights at Freddy's (FNAF) - The Living Tombstone",
+    "Monster Mash - Bobby Pickett",
+    "This Is Halloween - Danny Elfman",
+    "Tubular Bells (The Exorcist) - Mike Oldfield",
+    "Highway to Hell - AC/DC",
+    "Psycho Killer - Talking Heads",
+    "Sweet Dreams (Are Made of This) - Eurythmics",
+    "Superstition - Stevie Wonder",
+    "Disturbia - Rihanna",
+    "Time Warp - Rocky Horror Picture Show",
+    "Ghost Town - The Specials",
+    "Zombie - The Cranberries",
+    "Creep - Radiohead",
+    "Don't Fear The Reaper - Blue Öyster Cult",
+    "Halloween Theme - John Carpenter",
+    "Pet Sematary - Ramones"
+  ]
+}

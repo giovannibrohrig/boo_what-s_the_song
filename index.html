@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boo! What's the Song? 🎃👻</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Floating background decorations -->
+  <div class="spooky-bg">
+    <span class="ghost ghost-1">👻</span>
+    <span class="bat bat-1">🦇</span>
+    <span class="bat bat-2">🦇</span>
+    <span class="ghost ghost-2">👻</span>
+    <div class="fog"></div>
+  </div>
+
+  <header class="app-header">
+    <div class="header-content">
+      <div class="badge-tag">🎃 ESPECIAL DE HALLOWEEN 🎃</div>
+      <h1 class="logo-title">Boo! What's the Song?</h1>
+      <p class="subtitle-part">Part 2</p>
+      <p class="subtitle">Ouça os instrumentos isolados e adivinhe qual é a música assustadora!</p>
+    </div>
+    <div class="header-actions">
+      <button id="btn-how-to-play" class="icon-button" title="Como Jogar">❓</button>
+      <button id="btn-restart" class="icon-button" title="Reiniciar Partida">🔄</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Status / Round Tracker & Song Selection -->
+    <section class="game-status-card">
+      <div class="song-switcher">
+        <label for="song-select" class="song-select-label">🎵 Faixa:</label>
+        <select id="song-select" class="song-select-dropdown">
+          <!-- Inserido dinamicamente via JS -->
+        </select>
+      </div>
+      <div class="round-info">
+        <span class="round-label">Rodada:</span>
+        <span id="current-round-text" class="round-value">1 de 5</span>
+      </div>
+      <div class="attempts-tracker" id="attempts-tracker">
+        <!-- Rendered dynamically: Pumpkins that light up or carve -->
+      </div>
+    </section>
+
+    <!-- Master Audio Player -->
+    <section class="player-panel">
+      <div class="player-controls">
+        <button id="btn-play-pause" class="btn-play-pause" disabled>
+          <span class="play-icon">▶</span>
+          <span class="play-text">Carregando Áudio...</span>
+        </button>
+        <div class="timeline-container">
+          <span id="time-current" class="time-label">0:00</span>
+          <div class="progress-bar-wrapper" id="progress-bar-wrapper">
+            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+            <div id="progress-thumb" class="progress-thumb"></div>
+          </div>
+          <span id="time-total" class="time-label">0:00</span>
+        </div>
+      </div>
+      <div class="player-subcontrols">
+        <div class="master-volume">
+          <span class="vol-icon">🔊</span>
+          <input type="range" id="master-volume" min="0" max="1" step="0.05" value="0.9">
+        </div>
+        <div class="audio-tip">
+          💡 <em>Dica: O áudio toca em sincronia perfeita! Mais instrumentos se somam a cada tentativa.</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instrument Stems Grid -->
+    <section class="stems-section">
+      <h2 class="section-title">Instrumentos 🎧</h2>
+      <div class="stems-grid" id="stems-grid">
+        <!-- Inserido dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- Guess / Action Section -->
+    <section class="guess-section" id="guess-section">
+      <div class="guess-box">
+        <div class="autocomplete-container">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="guess-input" 
+            placeholder="Qual é a música? (Digite ou escolha da lista...)" 
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <div id="autocomplete-list" class="autocomplete-items"></div>
+        </div>
+        <button id="btn-submit-guess" class="btn-primary" disabled>
+          Adivinhar 🎯
+        </button>
+      </div>
+
+      <div class="guess-actions">
+        <button id="btn-skip-round" class="btn-secondary">
+          Pular (+1 Instrumento) ⏭️
+        </button>
+      </div>
+
+      <div class="previous-guesses" id="previous-guesses">
+        <!-- Histórico de chutes -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal: Como Jogar -->
+  <div id="modal-help" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <button class="modal-close" id="btn-close-help">&times;</button>
+      <h2 class="modal-title">👻 Como Jogar?</h2>
+      <div class="modal-body">
+        <p>Inspirado no clássico <strong>Bandle</strong>:</p>
+        <ol>
+          <li><strong>Rodada 1:</strong> Você escuta apenas a <strong>Bateria</strong> (Drums).</li>
+          <li>Tente adivinhar o nome da música assustadora usando a barra de busca!</li>
+          <li>Se errar ou clicar em <strong>Pular</strong>, um novo instrumento é liberado (Baixo 🎸, Guitarra ⚡🎸, Sintetizadores/Outros 🎹 e por fim Vocais 🎤).</li>
+          <li>Todos os instrumentos tocam ao mesmo tempo e em sincronia perfeita.</li>
+          <li>Você tem até <strong>5 tentativas</strong> para acertar!</li>
+        </ol>
+      </div>
+      <button class="btn-primary" id="btn-understood">Entendi, vamos jogar!</button>
+    </div>
+  </div>
+
+  <!-- Modal: Vitória / Fim de Jogo -->
+  <div id="modal-result" class="modal-backdrop hidden">
+    <div class="modal-card result-card">
+      <div id="result-icon" class="result-icon">🎉</div>
+      <h2 id="result-title" class="modal-title">Você Acertou!</h2>
+      <p id="result-subtitle" class="result-subtitle"></p>
+
+      <div class="song-reveal-box">
+        <div class="song-artwork">🧟‍♂️</div>
+        <div class="song-details">
+          <h3 id="reveal-song-title"></h3>
+          <p id="reveal-song-artist"></p>
+          <span id="reveal-song-hint" class="song-hint-badge"></span>
+        </div>
+      </div>
+
+      <div class="result-stats" id="result-stats">
+        <!-- Estatísticas da rodada -->
+      </div>
+
+      <div class="modal-actions">
+        <button id="btn-play-all-result" class="btn-secondary">
+          🔊 Ouvir no Mixer
+        </button>
+        <button id="btn-next-song" class="btn-primary">
+          Próxima Música ⏭️
+        </button>
+        <button id="btn-play-again" class="btn-secondary">
+          Repetir 🔄
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    <p class="footer-team">Criado por: <strong>Alice, Clara, Giovanni, Joelma e Mateuzinho</strong> 🎃</p>
+    <p class="footer-desc">Atividade de Inglês • Especial de Halloween</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
